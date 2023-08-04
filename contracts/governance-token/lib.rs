@@ -7,7 +7,7 @@ pub use self::governancetoken::governancetokenRef;
 #[openbrush::contract]
 pub mod my_psp22 {
     use openbrush::traits::Storage;
-
+    use openbrush::traits::PSP22;
     #[ink(storage)]
     #[derive(Default, Storage)]
     pub struct Contract {
