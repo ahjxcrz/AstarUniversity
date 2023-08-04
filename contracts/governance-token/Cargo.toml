@@ -18,7 +18,7 @@ openbrush = { git = "https://github.com/Brushfam/openbrush-contracts", version =
 
 [dev-dependencies]
 ink_e2e = "4.2.1"
-test_helpers = { path = "../../test_helpers", default-features = false }
+#test_helpers = { path = "../../test_helpers", default-features = false }
 
 [lib]
 name = "my_psp22_metadata"
