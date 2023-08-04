@@ -16,7 +16,9 @@ pub mod dao {
         // to implement
         Against,
         For,
-    }
+    } 
+  
+    pub struct ProposalId(u64);     // not sure if this would work 
 
     #[derive(Copy, Clone, Debug, PartialEq, Eq, Encode, Decode)]
     #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
@@ -74,8 +76,8 @@ pub mod dao {
         // to implement
         governance_token: AccountId,
         quorum: u8,
-        proposals: Mapping<AccountID, Proposal>,
-        proposal_votes: Mapping<AccountID, ProposalVote>,
+        proposals: Mapping<ProposalId, Proposal>,
+        proposal_votes: Mapping<Proposal, ProposalVote>,
         
     }
 
