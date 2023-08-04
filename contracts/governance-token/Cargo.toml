@@ -1,7 +1,7 @@
 #   Implement PSP2 + PSP22Metadata
 [package]
 name = "my_psp22_metadata"
-#version= "4.0.0-beta"
+version= "4.0.0-beta"
 version= "3.1.1"
 authors = ["Brushfam <m.konstantinovna@727.ventures>"]
 edition = "2021"
