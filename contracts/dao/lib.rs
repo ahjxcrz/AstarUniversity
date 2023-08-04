@@ -4,6 +4,7 @@
 pub mod dao {
     use ink::storage::Mapping;
     use openbrush::contracts::traits::psp22::*;
+    use self::governancetoken::governancetokenRef;;
     use scale::{
         Decode,
         Encode,
@@ -13,6 +14,8 @@ pub mod dao {
     #[cfg_attr(feature = "std", derive(Debug, PartialEq, Eq, scale_info::TypeInfo))]
     pub enum VoteType {
         // to implement
+        Against,
+        For,
     }
 
     #[derive(Copy, Clone, Debug, PartialEq, Eq, Encode, Decode)]
@@ -34,6 +37,11 @@ pub mod dao {
     )]
     pub struct Proposal {
         // to implement
+        to: String,
+        vote_start: u64,
+        vote_end: u64,
+        executed: bool,
+        amount: u64,
     }
 
     #[derive(Encode, Decode, Default)]
@@ -49,6 +57,8 @@ pub mod dao {
     )]
     pub struct ProposalVote {
         // to implement
+        for_votes: f32,
+        against_votes: f32,
     }
 
     #[ink(storage)]
