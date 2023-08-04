@@ -22,6 +22,14 @@ pub mod dao {
     #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
     pub enum GovernorError {
         // to implement
+        AmountShouldNotBeZero,
+        DurationError,
+        ProposalNotFound,
+        ProposalAlreadyExecuted,
+        VotePeriodEnded,
+        AlreadyVoted,
+        QuorumNotReached,
+        ProposalNotAccepted,
     }
 
     #[derive(Encode, Decode)]
@@ -64,6 +72,11 @@ pub mod dao {
     #[ink(storage)]
     pub struct Governor {
         // to implement
+        governance_token: AccountId,
+        quorum: u8,
+        proposals: Mapping<AccountID, Proposal>,
+        proposal_votes: Mapping<AccountID, ProposalVote>,
+        
     }
 
     impl Governor {
