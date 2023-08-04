@@ -2,7 +2,7 @@
 [package]
 name = "my_psp22_metadata"
 version= "4.0.0-beta"
-version= "3.1.1"
+#version= "3.1.1"
 authors = ["Brushfam <m.konstantinovna@727.ventures>"]
 edition = "2021"
 
@@ -15,7 +15,7 @@ scale-info = { version = "2.6", default-features = false, features = ["derive"],
 # These dependencies
 #openbrush = { path = "../../..", default-features = false, features = ["psp22"] }
 
-openbrush = { git = "https://github.com/Brushfam/openbrush-contracts", version = "3.1.1", default-features = false , features = ["psp22"] }
+openbrush = { git = "https://github.com/Brushfam/openbrush-contracts", version = "4.0.0-beta", default-features = false , features = ["psp22"] }
 
 [dev-dependencies]
 ink_e2e = "4.2.1"
